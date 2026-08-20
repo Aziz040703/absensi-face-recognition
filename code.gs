@@ -3498,8 +3498,17 @@ function getAbsensiSettings() {
                     result[key] = {};
 
                 }
-                
 
+            } else if (
+                value instanceof Date
+            ) {
+              
+                  result[key] =
+                        Utilities.formatDate(
+                        value,
+                        Session.getScriptTimeZone(),
+                        "HH:mm"
+                        );
 
             } else {
 
