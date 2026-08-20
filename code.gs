@@ -2092,7 +2092,7 @@ function simpanAbsensi(data) {
     console.log("WAKTU SERVER:", new Date());
 
     try {
-
+        const TEST_MODE = true;
 
         data = data || {};
 
@@ -2469,6 +2469,7 @@ function simpanAbsensi(data) {
             // Belum waktunya masuk
 
             if (
+                !TEST_MODE &&
                 menitSekarang <
                 menitJamMasuk
             ) {
@@ -2488,6 +2489,7 @@ function simpanAbsensi(data) {
             // Batas masuk sudah lewat
 
             if (
+                !TEST_MODE &&
                 menitSekarang >=
                 menitBatasMasuk
             ) {
@@ -2575,6 +2577,7 @@ function simpanAbsensi(data) {
             // Belum waktunya pulang
 
             if (
+                !TEST_MODE &&
                 menitSekarang <
                 menitJamPulang
             ) {
@@ -2594,6 +2597,7 @@ function simpanAbsensi(data) {
             // Batas pulang sudah lewat
 
             if (
+                !TEST_MODE &&
                 menitSekarang >
                 menitBatasPulang
             ) {
