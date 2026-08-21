@@ -2497,10 +2497,7 @@ function simpanAbsensi(data) {
 
                 success: true,
 
-                message:
-                    terlambat
-                        ? "Absensi MASUK berhasil. Anda terlambat."
-                        : "Absensi MASUK berhasil disimpan.",
+
 
                 data: [{
 
