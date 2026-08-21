@@ -2468,42 +2468,9 @@ function simpanAbsensi(data) {
 
             // Belum waktunya masuk
 
-            if (
-                !TEST_MODE &&
-                menitSekarang <
-                menitJamMasuk
-            ) {
-
-                return {
-                    success: false,
-                    message:
-                        "Absensi MASUK belum dibuka. Mulai pukul " +
-                        settings.jamMasuk +
-                        ".",
-                    data: []
-                };
-
-            }
 
 
-            // Batas masuk sudah lewat
-
-            if (
-                !TEST_MODE &&
-                menitSekarang >=
-                menitBatasMasuk
-            ) {
-
-                return {
-                    success: false,
-                    message:
-                        "Waktu absensi MASUK sudah ditutup pada pukul " +
-                        settings.batasMasuk +
-                        ".",
-                    data: []
-                };
-
-            }
+            
 
 
             // Terlambat atau tidak
