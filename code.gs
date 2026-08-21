@@ -2473,18 +2473,7 @@ function simpanAbsensi(data) {
             
 
 
-            // Terlambat atau tidak
 
-            const terlambat =
-                menitSekarang >
-                menitTerlambat;
-
-
-            const statusMasuk =
-                terlambat &&
-                settings.statusTerlambat !== false
-                    ? "MASUK TERLAMBAT"
-                    : "MASUK";
 
 
             sheet.appendRow([
